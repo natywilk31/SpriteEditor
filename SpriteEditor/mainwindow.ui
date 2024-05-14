@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>System</family>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>NNJR Sprite Editor</string>
+  </property>
+  <property name="accessibleName">
+   <string/>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="nameLabel">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>10</y>
+      <width>271</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Modern</family>
+      <pointsize>28</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>Sprite Editor</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>288</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="drawOptions">
+     <item>
+      <widget class="QPushButton" name="colorPickerButton">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Color Picker</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="verticalAxisMirror">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Mirror Pixels Over Vertical Axis</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="horizontalAxisMirror">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Mirror Pixels Over Horizontal Axis</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="diagonalAxisMirror">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Mirror Pixels Over Diagonal Axis</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>279</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="frameChooserGrid">
+     <item>
+      <widget class="QPushButton" name="prevFrameButton">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Prev</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="framesLabel">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Frames</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="frameSelectionBox">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="nextFrameButton">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Next</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="DrawPanel" name="drawPanel">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>80</y>
+      <width>416</width>
+      <height>416</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>416</width>
+      <height>416</height>
+     </size>
+    </property>
+    <property name="cursor">
+     <cursorShape>CrossCursor</cursorShape>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>drawPanel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>261</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="frameLayout">
+     <item>
+      <widget class="QPushButton" name="addFrameButton">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Add Frame</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="copyCurrentFrameButton">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Duplicate Frame</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="deleteFrameButton">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Delete Frame</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>241</width>
+      <height>59</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="drawErase">
+     <item>
+      <widget class="QRadioButton" name="drawButton">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Draw</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="eraseButton">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Erase</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>271</width>
+      <height>64</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="previewButtons">
+     <item>
+      <widget class="QPushButton" name="previewSpriteButton">
+       <property name="font">
+        <font>
+         <family>System</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Preview Sprite</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGraphicsView" name="background">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>305</x>
+      <y>75</y>
+      <width>423</width>
+      <height>423</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>256</width>
+      <height>0</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UndoButton">
+    <property name="geometry">
+     <rect>
+      <x>19</x>
+      <y>10</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>System</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Undo</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RedoButton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>System</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Redo</string>
+    </property>
+   </widget>
+   <zorder>background</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>nameLabel</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>horizontalLayoutWidget</zorder>
+   <zorder>verticalLayoutWidget_3</zorder>
+   <zorder>drawPanel</zorder>
+   <zorder>UndoButton</zorder>
+   <zorder>RedoButton</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DrawPanel</class>
+   <extends>QLabel</extends>
+   <header>drawpanel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

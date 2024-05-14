@@ -1,0 +1,12 @@
+release/dialog.o
+release/drawpanel.o
+release/main.o
+release/mainwindow.o
+release/model.o
+release/savewarning.o
+release/sizeinput.o
+release/moc_dialog.o
+release/moc_drawpanel.o
+release/moc_mainwindow.o
+release/moc_model.o
+release/moc_sizeinput.o
